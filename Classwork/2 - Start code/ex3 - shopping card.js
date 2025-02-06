@@ -20,7 +20,13 @@ const SHOPPING_CART = [
  */
 function getCartTotalAmount() {
   let result = 0;
-  // Write your code here
+  for (item of SHOPPING_CART) {
+    let itemId = item.id;
+    let quantity = item.quantity;
+    let product = PRODUCTS.find((pro) => pro.id === itemId);
+    let price = product.price;
+    result += quantity * price;
+  }
   return result;
 }
 
@@ -36,7 +42,13 @@ function getCartTotalAmount() {
  * @param {*} productId  the product id to add
  */
 function addProductToCart(productId) {
-  // Write your code here
+  for (item of SHOPPING_CART) {
+    if (item.id == productId) {
+      item.quantity++;
+      return;
+    }
+  }
+  SHOPPING_CART.push({ id: productId, quantity: 1 });
 }
 
 /**
@@ -54,7 +66,11 @@ function addProductToCart(productId) {
  * @param {*} productId  the product id to add
  */
 function removeProductFromCart(productId) {
-  // Write your code here
+  let item = SHOPPING_CART.find((i) => i.id === productId);
+  if (item.quantity >= 2) item.quantity--;
+  else{
+    SHOPPING_CART.pop(item);
+  }
 }
 
 // --------------------------------------------------------

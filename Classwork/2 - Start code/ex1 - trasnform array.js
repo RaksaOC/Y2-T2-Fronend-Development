@@ -12,7 +12,9 @@
  */
 function transformToObjects(listOfNumbers) {
   result = [];
-  // Write your code here
+  for(num of listOfNumbers){
+    result.push({val: num});
+  }
   return result;
 }
 
