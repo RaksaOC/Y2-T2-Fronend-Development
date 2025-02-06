@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ex1</title>
+  </head>
+  <body>
+    <main>
+      <p>Task</p>
+      <input type="text" id="task" />
+      <p>Tag</p>
+      <select name="" id="tag">
+        <option value="important">Important</option>
+        <option value="not-important">Not Important</option>
+      </select>
+      <button id="add">Add Task</button>
+      <button id="im">Show only important tasks</button>
+      <button id="not-im">Show only not important tasks</button>
+      <button id="all">Show all tasks</button>
+      <div id="taskList"></div>
+    </main>
+    <script>
+      const main = document.querySelector("main");
+      const task = document.querySelector("#task");
+      const tag = document.querySelector("#tag");
+      const add = document.querySelector("#add");
+      const im = document.querySelector("#im");
+      const not_im = document.querySelector("#not-im");
+      const all = document.querySelector("#all");
+      const taskList = document.querySelector("#taskList");
+      let tasks = [];
+
+      let div = document.createElement("div");
+      div.style.width = "300px";
+      div.style.height = "100px";
+      div.style.backgroundColor = "gray";
+      div.style.color = "white";
+
+      function displayTask(tasks) {
+        for (element of tasks) {
+          div = document.createElement("div");
+          const content = document.createTextNode(element.description);
+          div.appendChild(content);
+          if (element.priority === 1) {
+            div.style.backgroundColor = "red";
+          }
+          taskList.appendChild(div);
+        }
+      }
+
+      let val;
+      task.addEventListener("input", function () {
+        val = task.value;
+        console.log(val);
+      });
+
+      let prio;
+      tag.addEventListener("change", function () {
+        priority = tag.value;
+        if (priority === "important") prio = 1;
+        else prio = 0;
+      });
+
+      add.addEventListener("click", function () {
+        tasks.push({ description: val, priority: prio });
+        taskList.innerHTML = "";
+        displayTask(tasks);
+      });
+
+      all.addEventListener("click", function () {
+        taskList.innerHTML = "";
+        displayTask(tasks);
+      });
+      let imTasks;
+      im.addEventListener("click", function () {
+        imTasks = tasks.filter((task) => task.priority === 1);
+        taskList.innerHTML = "";
+        displayTask(imTasks);
+      });
+
+      let notImTasks;
+      not_im.addEventListener("click", function () {
+        notImTasks = tasks.filter((task) => task.priority === 0);
+        taskList.innerHTML = "";
+        displayTask(notImTasks);
+      });
+    </script>
+  </body>
+</html>
