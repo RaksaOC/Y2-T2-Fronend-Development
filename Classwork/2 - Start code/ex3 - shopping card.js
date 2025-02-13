@@ -94,4 +94,4 @@ console.log(JSON.stringify(SHOPPING_CART)); //  Shoud be    [{"id":1,"quantity":
 
 // test 5  -
 removeProductFromCart(2);
-console.log(JSON.stringify(SHOPPING_CART)); //  Shoud be    [{"id":1,"quantity":2},{"id":3,"quantity":1}]
+console.log(JSON.stringify(SHOPPING_CART)); //  Shoud be    [{"id":1,"quantity":2},{"id":3,"quantity":1}]„
