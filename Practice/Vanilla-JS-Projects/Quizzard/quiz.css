@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Keania+One&family=Lexend+Giga:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Exo 2", serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(234, 234, 234, 0.6);
+    border-radius: 50px;
+    padding: 30px;
+}
+
+.question-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.background-img{
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    /* background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(148,187,233,1) 100%); */
+    background-image: url(./images/back.png);
+}
+
+.background-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent overlay */
+    z-index: 1;
+  }
+
+.question-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 20px;
+}
+
+.question-wrapper h2{
+    font-weight: 700;
+    text-align: center;
+}
+
+.question-wrapper h3{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.ans-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.ans-wrapper button{
+    padding: 10px;
+    width: 250px;
+    background-color: white;
+    border-radius: 20px;
+    transition: all ease 0.5s;
+    cursor: pointer;
+}
+
+.ans-wrapper button:hover{
+    transform: scale(1.01);
+    background-color: #EAEAEA;
+}
+
+.back{
+    padding: 10px;
+    background-color: white;
+    border-radius: 20px;
+    transition: all ease 0.5s;
+    cursor: pointer;
+    margin-top: 10px;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+}
+
+.back:hover{
+    transform: scale(1.01);
+    background-color: #EAEAEA;
+}
+
+@media (max-width: 1300px) {
+    main{
+        width: 90% !important;
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="background-img"></div>
+    <main class="main">
+      <div class="hero">
+        <img src="./images/logo.png" alt="logo" />
+        <h1>Think Fast</h1>
+        <h2>How quick is your mind? Find Out!</h2>
+        <div class="hero-btn-wrapper">
+          <button
+            onClick="window.location.href = '#quizzes'"
+            class="start-quiz"
+          >
+            Start Quiz!
+          </button>
+          <button class="create-quiz" id="quiz-maker">Create Quiz</button>
+        </div>
+      </div>
+      <h1 style="text-align: center; margin-top: 40px">Popular quizzes</h1>
+      <div class="pop-quizzes" id="quizzes">
+        <!-- dynamically loaded from js -->
+      </div>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>

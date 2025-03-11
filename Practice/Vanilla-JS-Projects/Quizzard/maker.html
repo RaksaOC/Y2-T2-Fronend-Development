@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Maker</title>
+    <link rel="stylesheet" href="maker.css" />
+  </head>
+  <body>
+    <div class="background-img"></div>
+    <main class="main">
+        <div class="wrapper">
+            <div class="question">
+                <h2 id="question-head">Question 1</h2>
+                <input type="text" name="" id="ques" />
+              </div>
+              <div class="choices-wrapper">
+                <div class="correct-answer">
+                  <h2>Correct Answer</h2>
+                  <input type="text" name="" id="correct" placeholder="Correct Answer"/>
+                </div>
+                <div class="wrong-answer">
+                  <div class="wrong-label">
+                    <h2>Wrong answers</h2>
+                  </div>
+                  <div class="wrong-input">
+                    <input type="text" name="" id="wrong1" placeholder="Wrong Answer"/>
+                    <input type="text" name="" id="wrong2" placeholder="Wrong Answer"/>
+                    <input type="text" name="" id="wrong3" placeholder="Wrong Answer"/>
+                  </div>
+                </div>
+              </div>
+        </div>
+      
+    </main>
+    <div class="page-nav">
+      <button id="back">Back</button>
+      <button id="next">Next</button>
+      <button id="finish">Finish</button>
+    </div>
+    <script src="maker.js"></script>
+  </body>
+</html>
