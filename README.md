@@ -1,7 +1,3 @@
-Sure! Here's your updated README with an expanded **Purpose** and **Overall Info** section. This version keeps the technical details minimal and focuses more on the narrative and intent behind the repository:
-
----
-
 # Frontend Course Assignments (10 Weeks)
 
 This repository contains all the assignments from a 10-week frontend development course. The course starts with the core principles of JavaScript and builds up to modern frontend development with React. Each week is designed to deepen understanding through hands-on exercises, challenges, and a final capstone project that brings everything together.
